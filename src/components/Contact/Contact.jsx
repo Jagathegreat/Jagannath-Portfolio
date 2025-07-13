@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,10 +12,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_axbtt7a",  // Replace with your EmailJS Service ID
-        "template_1ziboq3",  // Replace with your EmailJS Template ID
+        "service_cww0w7s",  // Replace with your EmailJS Service ID
+        "template_jd343o3",  // Replace with your EmailJS Template ID
         form.current,
-        "Rz7W9pVF0HdDryNNL"  // Replace with your EmailJS Public Key
+        "vZVuHgUPbuPAMyiea"  // Replace with your EmailJS Public Key
       )
       .then(
         () => {
@@ -72,21 +72,21 @@ const Contact = () => {
         <form ref={form} onSubmit={sendEmail} className="mt-4 flex flex-col space-y-4">
           <input
             type="email"
-            name="user_email"
+            name="email"
             placeholder="Your Email"
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
           <input
             type="text"
-            name="user_name"
+            name="name"
             placeholder="Your Name"
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
           <input
             type="text"
-            name="subject"
+            name="title"
             placeholder="Subject"
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
@@ -98,7 +98,13 @@ const Contact = () => {
             required
             className="w-full p-3 rounded-md bg-[#131025] text-white border border-gray-600 focus:outline-none focus:border-purple-500"
           />
-          
+          <input
+            type="hidden"
+            name="date"
+            value={new Date().toLocaleString()}
+          />
+
+
           {/* Send Button */}
           <button
             type="submit"
