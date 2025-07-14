@@ -18,7 +18,7 @@ import vercelLogo from './assets/tech_logo/vercel.png';
 import vscodeLogo from './assets/tech_logo/vscode.png';
 import oracle from "./assets/tech_logo/oracle.png";
 import jsp from "./assets/tech_logo/jsp.png";
-import jdbc from "./assets/tech_logo/Database.png";
+import jdbc from "./assets/tech_logo/database.png";
 
 // Experience Section Logo's
 import agcLogo from './assets/company_logo/agc_logo.png';
